@@ -210,7 +210,7 @@ def get_args() -> Namespace:
     """Returns the command line arguments."""
 
     parser = ArgumentParser(description='Molly guard control CLI.')
-    subparsers = parser.add_subparsers(dest='action', required=True)
+    subparsers = parser.add_subparsers(dest='action'
     subparsers.add_parser('start', help='start mollyguarding')
     subparsers.add_parser('stop', help='stop mollyguarding')
     subparsers.add_parser('unlock', help='unlock LUKS')

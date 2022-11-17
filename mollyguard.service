@@ -2,9 +2,9 @@
 Description=Prevent accidental shutdowns, reboots etc.
 
 [Service]
-ExecStart=/usr/bin/mollyguardctl start
+ExecStart=/usr/local/sbin/mollyguardctl start
 RemainAfterExit=true
-ExecStop=/usr/bin/mollyguardctl stop
+ExecStop=/usr/local/sbin/mollyguardctl stop
 
 [Install]
 WantedBy=multi-user.target

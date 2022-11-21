@@ -1,0 +1,14 @@
+- name: Create temporary directory
+  file:
+          path: /tmp/mollyguardctl
+          state: directory
+
+- name: Clone mollyguardctl from PC2 Github
+  git:
+                repo: "https://github.com/pc2/mollyguardctl-py3.6.git"
+                dest: "/tmp/mollyguardctl"
+                update: yes
+
+- name: Run mollyguardctl installer to install and enable
+  ansible.builtin.script:
+          cmd: /bin/bash /tmp/mollyguardctl/setup.sh
